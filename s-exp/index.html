@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>S-Exploration</title>
+    <script src="./res/main.js"></script>
+    <link rel="stylesheet" href="./res/base.css">
+  </head>
+  <body><div><header><h1>S-Exploration</h1><i>Graphical S-expression Editor</i></header><div id="content"><div class="grid-third"><textarea id="code" value="
+(defn map [f [x &amp; xs]]
+  (cons (f x) (map f xs)))
+
+(defn fact [n]
+  (if (= n 1)
+    1
+    (* n (fact (- n 1)))))
+
+(map fact [1 2 3 4 5])
+
+{ :name " clojure"="" :characteristics="" ["simple"="" "awesome"]="" :identity="" (fn="" [x]="" x)="" }="" "="" watch="code-watch">(defn map [f [x &amp; xs]]
+  (cons (f x) (map f xs)))
+
+(defn fact [n]
+  (if (= n 1)
+    1
+    (* n (fact (- n 1)))))
+
+(map fact [1 2 3 4 5])
+
+{ :name "Clojure"
+ :characteristics
+ ["simple" "awesome"]
+ :identity (fn [x] x) }
+</textarea></div><div class="grid-two-thirds"><div class="visual-sexp"><div draggable="true" class="wrap-defn sexp-wrap" title="function definition"><span class="sexp-defn sexp-item">defn</span><span class="sexp-defn-fname sexp-item" title="function name">map</span><div class="wrap-vec sexp-wrap" title="function parameters"><span class="sexp-symbol sexp-item" title="symbol">f</span><div class="wrap-vec sexp-wrap" title="a vector"><span class="sexp-symbol sexp-item" title="symbol">x</span><span title="ampersand followed by a parameter denotes rest-argument">&amp;</span><span class="sexp-symbol sexp-item" title="symbol">xs</span></div></div><div class="newline" title="function body"><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">cons</span><div class="inline-block" title="arguments to the function"><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">f</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">x</span></div></div><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">map</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">f</span><span class="sexp-symbol sexp-item" title="symbol">xs</span></div></div></div></div></div></div><div draggable="true" class="wrap-defn sexp-wrap" title="function definition"><span class="sexp-defn sexp-item">defn</span><span class="sexp-defn-fname sexp-item" title="function name">fact</span><div class="wrap-vec sexp-wrap" title="function parameters"><span class="sexp-symbol sexp-item" title="symbol">n</span></div><div class="newline" title="function body"><div class="wrap-if sexp-wrap" title="a specialform - if"><span class="sexp-if">if</span><div class="inline-block" title="condition"><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">=</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">n</span><span class="sexp-num sexp-item" title="number">1</span></div></div></div><div class="newline"><div class="inline-block" title="then branch"><span class="sexp-num sexp-item" title="number">1</span></div><div class="newline"><div class="inline-block" title="else branch"><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">*</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">n</span><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">fact</span><div class="inline-block" title="arguments to the function"><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">-</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">n</span><span class="sexp-num sexp-item" title="number">1</span></div></div></div></div></div></div></div></div></div></div></div></div><div class="wrap-ap sexp-wrap" title="function application"><span class="sexp-fn sexp-item" title="name of the function">map</span><div class="inline-block" title="arguments to the function"><span class="sexp-symbol sexp-item" title="symbol">fact</span><div class="wrap-vec sexp-wrap" title="a vector"><span class="sexp-num sexp-item" title="number">1</span><span class="sexp-num sexp-item" title="number">2</span><span class="sexp-num sexp-item" title="number">3</span><span class="sexp-num sexp-item" title="number">4</span><span class="sexp-num sexp-item" title="number">5</span></div></div></div><div class="wrap-map sexp-wrap" title="a map"><table><tbody><tr><td class="wrap-mapkey"><span class="sexp-val sexp-item" title="keyword">:identity</span></td><td class="wrap-mapval"><div class="wrap-fn sexp-wrap" title="a lambda"><span class="sexp-defn sexp-item">fn</span><div class="wrap-vec sexp-wrap" title="function parameters"><span class="sexp-symbol sexp-item" title="symbol">x</span></div><div class="inline-block" title="function body"><span class="sexp-symbol sexp-item" title="symbol">x</span></div></div></td></tr><tr><td class="wrap-mapkey"><span class="sexp-val sexp-item" title="keyword">:characteristics</span></td><td class="wrap-mapval"><div class="wrap-vec sexp-wrap" title="a vector"><span class="sexp-str sexp-item" title="string">simple</span><span class="sexp-str sexp-item" title="string">awesome</span></div></td></tr><tr><td class="wrap-mapkey"><span class="sexp-val sexp-item" title="keyword">:name</span></td><td class="wrap-mapval"><span class="sexp-str sexp-item" title="string">Clojure</span></td></tr></tbody></table></div></div><span>Mouseover the blocks to see hints.</span></div></div></div></body></html>
